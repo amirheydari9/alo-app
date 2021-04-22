@@ -1,4 +1,4 @@
-export interface Years {
+export interface Year {
   id: string;
   title: string;
 }

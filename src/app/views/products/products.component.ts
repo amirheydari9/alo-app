@@ -3,7 +3,8 @@ import * as fromStore from '../../store';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {ProductService} from '../../core/services/product.service';
-import {Years} from '../../data/models/Years';
+import {Year} from '../../data/models/Year';
+import {YearService} from '../../core/services/year.service';
 
 @Component({
   selector: 'app-products',
@@ -11,19 +12,17 @@ import {Years} from '../../data/models/Years';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  selected = 'option2';
-  id: Observable<string>;
-  years: Observable<Years[]>;
+  years: Observable<Year[]>;
 
   constructor(
     private store: Store<fromStore.State>,
-    private productService: ProductService
+    private productService: ProductService,
+    private yearService: YearService,
   ) {
-    this.id = this.store.select(fromStore.getProductId);
+    this.years = this.store.select(fromStore.getYears);
   }
 
   ngOnInit(): void {
-    this.years = this.productService.getYears();
-    this.store.dispatch(new fromStore.GetData());
+    this.store.dispatch(new fromStore.GetYear());
   }
 }

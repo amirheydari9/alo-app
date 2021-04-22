@@ -1,8 +1,8 @@
 <div class="d-flex flex-row flex-wrap">
   <div class="col-12 col-sm-4">
     <mat-form-field appearance="outline" class="w-100">
-      <mat-label>Select an option</mat-label>
-      <mat-select [(value)]="selected">
+      <mat-label>سال تولید کالا</mat-label>
+      <mat-select>
         <mat-option *ngFor="let year of years|async" value="{{year.id}}">{{year.title}}</mat-option>
       </mat-select>
     </mat-form-field>

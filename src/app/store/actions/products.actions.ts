@@ -1,28 +1,28 @@
 import {Action} from '@ngrx/store';
-import {IData} from '../../data/models/data';
+import {Year} from '../../data/models/Year';
 
-export enum GetDataActionTypes {
-  GET_DATA = '[GET DATA] Load',
-  GET_DATA_SUCCESS = '[GET DATA] Load success',
-  GET_DATA_FAIL = '[GET DATA] Load Fail',
+export enum GetYearActionTypes {
+  GET_YEAR = '[GET YEAR] Load',
+  GET_YEAR_SUCCESS = '[GET YEAR] Load success',
+  GET_YEAR_FAIL = '[GET YEAR] Load Fail',
 }
 
-export class GetData implements Action {
-  readonly type = GetDataActionTypes.GET_DATA;
+export class GetYear implements Action {
+  readonly type = GetYearActionTypes.GET_YEAR;
 }
 
-export class GetDataSuccess implements Action {
-  readonly type = GetDataActionTypes.GET_DATA_SUCCESS;
-  constructor(public payload: IData) {
+export class GetYearSuccess implements Action {
+  readonly type = GetYearActionTypes.GET_YEAR_SUCCESS;
+  constructor(public payload: Year[]) {
   }
 }
 
-export class GetDataFail implements Action {
-  readonly type = GetDataActionTypes.GET_DATA_FAIL;
+export class GetYearFail implements Action {
+  readonly type = GetYearActionTypes.GET_YEAR_FAIL;
   constructor(public payload: string) {
   }
 }
 
 
 export type AllProductsAction =
-  GetData | GetDataSuccess | GetDataFail;
+  GetYear | GetYearSuccess | GetYearFail;

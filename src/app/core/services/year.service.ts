@@ -6,11 +6,14 @@ import {Year} from '../../data/models/Year';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class YearService {
 
   constructor(
     private http: HttpClient
   ) {
   }
 
+  getYears(): Observable<Year[]> {
+    return this.http.get<Year[]>('http://localhost:3000/years');
+  }
 }

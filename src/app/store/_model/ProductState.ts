@@ -1,4 +1,5 @@
+import {Year} from '../../data/models/Year';
+
 export interface ProductState {
-  id: string;
-  name: string;
+  years: Year[];
 }

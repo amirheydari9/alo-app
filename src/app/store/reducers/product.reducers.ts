@@ -1,19 +1,17 @@
-import {AllProductsAction, GetDataActionTypes} from '../actions';
+import {AllProductsAction, GetYearActionTypes} from '../actions';
 import {ProductState} from '../_model/ProductState';
 
 export const initProductsState: ProductState = {
-  id: '12',
-  name: 'amir',
+  years: []
 };
 
 export function productsReducer(state = initProductsState, action: AllProductsAction): ProductState {
   switch (action.type) {
-    case GetDataActionTypes.GET_DATA:
+    case GetYearActionTypes.GET_YEAR_SUCCESS:
       return {
         ...state,
-        id: '1111'
+        years: action.payload
       };
-      break;
     default:
       return state;
   }
