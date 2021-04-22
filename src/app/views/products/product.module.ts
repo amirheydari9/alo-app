@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ProductsComponent} from './products.component';
 import {ProductsRoutingModule} from './products-routing.module';
 import {ProductsMaterialModule} from '../../shared/modules/material/products-material.module';
-import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +17,6 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     ProductsRoutingModule,
     ProductsMaterialModule,
-    MatSelectModule
   ],
   providers: [],
 })
