@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {NgxUiLoaderService} from 'ngx-ui-loader';
 import {ProductModalComponent} from '../product-modal/product-modal.component';
@@ -32,6 +32,7 @@ export class ProductFormComponent implements OnInit {
       is_special: this.formData.is_special.value,
       is_active: this.formData.is_active.value,
     });
+    this.setValidators();
   }
 
   initForm() {
@@ -47,14 +48,72 @@ export class ProductFormComponent implements OnInit {
     });
   }
 
-  submitForm(): void {
-    this.ngxUiLoaderService.start();
-    const dialogRef = this.dialog.open(ProductModalComponent, {
-      disableClose: false,
-      data: {form: this.form.value}
-    });
-    dialogRef.afterClosed().subscribe(res => {
+  setValidators(): void {
+    this.titleControl.setValidators(this.formData.title.is_required ? [Validators.required] : null);
+    this.titleControl.updateValueAndValidity();
 
-    });
+    this.faTitleControl.setValidators(this.formData.fa_title.is_required ? [Validators.required] : null);
+    this.faTitleControl.updateValueAndValidity();
+
+    this.descriptionControl.setValidators(this.formData.description.is_required ? [Validators.required] : null);
+    this.descriptionControl.updateValueAndValidity();
+
+    this.countControl.setValidators(this.formData.count.is_required ? [Validators.required] : null);
+    this.countControl.updateValueAndValidity();
+
+    this.priceControl.setValidators(this.formData.price.is_required ? [Validators.required] : null);
+    this.priceControl.updateValueAndValidity();
+
+    this.discountControl.setValidators(this.formData.discount.is_required ? [Validators.required] : null);
+    this.discountControl.updateValueAndValidity();
+
+    this.isSpecialControl.setValidators(this.formData.is_special.is_required ? [Validators.required] : null);
+    this.isSpecialControl.updateValueAndValidity();
+
+    this.isActiveControl.setValidators(this.formData.is_active.is_required ? [Validators.required] : null);
+    this.isActiveControl.updateValueAndValidity();
+
+  }
+
+  get titleControl(): FormControl {
+    return this.form.get('title') as FormControl;
+  }
+
+  get faTitleControl(): FormControl {
+    return this.form.get('fa_title') as FormControl;
+  }
+
+  get descriptionControl(): FormControl {
+    return this.form.get('description') as FormControl;
+  }
+
+  get countControl(): FormControl {
+    return this.form.get('count') as FormControl;
+  }
+
+  get priceControl(): FormControl {
+    return this.form.get('price') as FormControl;
+  }
+
+  get discountControl(): FormControl {
+    return this.form.get('discount') as FormControl;
+  }
+
+  get isSpecialControl(): FormControl {
+    return this.form.get('is_special') as FormControl;
+  }
+
+  get isActiveControl(): FormControl {
+    return this.form.get('is_active') as FormControl;
+  }
+
+  submitForm(): void {
+    if (this.form.valid) {
+      this.ngxUiLoaderService.start();
+      this.dialog.open(ProductModalComponent, {
+        disableClose: false,
+        data: {form: this.form.value}
+      });
+    }
   }
 }
