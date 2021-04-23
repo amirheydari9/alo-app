@@ -81,7 +81,7 @@
         "is_required": true,
         "is_show": true
       },
-      "cost": {
+      "price": {
         "value": 1000,
         "is_required": true,
         "is_show": true
@@ -120,7 +120,7 @@
         "is_required": true,
         "is_show": true
       },
-      "cost": {
+      "price": {
         "value": 2000,
         "is_required": true,
         "is_show": true

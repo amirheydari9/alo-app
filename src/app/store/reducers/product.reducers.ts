@@ -8,13 +8,18 @@ export const initProductsState: ProductState = {
 
 export function productsReducer(state = initProductsState, action: AllProductsAction): ProductState {
   switch (action.type) {
+
     case GetYearActionTypes.GET_YEAR_SUCCESS:
       return {
         ...state,
         years: action.payload
       };
+    case GetProductActionTypes.GET_PRODUCT:
+      return {
+        ...state,
+        product: null
+      };
     case GetProductActionTypes.GET_PRODUCT_SUCCESS:
-      console.log(action.payload[0]);
       return {
         ...state,
         product: action.payload[0]

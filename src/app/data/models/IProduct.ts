@@ -7,7 +7,7 @@ export interface IProduct {
   fa_title: SampleObject;
   description: SampleObject;
   count: SampleObject;
-  cost: SampleObject;
+  price: SampleObject;
   discount: SampleObject;
   is_special: SampleObject;
 }
