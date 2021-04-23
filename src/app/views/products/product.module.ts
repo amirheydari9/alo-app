@@ -7,7 +7,6 @@ import {ProductsRoutingModule} from './products-routing.module';
 import {ProductsMaterialModule} from '../../shared/modules/material/products-material.module';
 import {ProductModalComponent} from './product-modal/product-modal.component';
 
-
 @NgModule({
   declarations: [
     ProductsComponent,
