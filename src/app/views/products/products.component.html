@@ -1,18 +1,16 @@
 <div class="container">
   <div class="d-flex flex-row flex-wrap">
     <div class="col-12 col-sm-4">
-     <form [formGroup]="parentForm">
-       <mat-form-field appearance="outline" class="w-100">
-         <mat-label>سال تولید کالا</mat-label>
-         <mat-select formControlName="year">
-           <mat-option *ngFor="let year of years$|async" value="{{year.id}}">{{year.title}}</mat-option>
-         </mat-select>
-       </mat-form-field>
-     </form>
+      <form [formGroup]="parentForm">
+        <mat-form-field appearance="outline" class="w-100">
+          <mat-label>سال تولید کالا</mat-label>
+          <mat-select formControlName="year">
+            <mat-option *ngFor="let year of years$|async" value="{{year.id}}">{{year.title}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
     </div>
   </div>
   <hr/>
-  <div *ngIf="product$ | async">
-    <app-product-form [formData]="product$ | async"></app-product-form>
-  </div>
+  <app-product-form *ngIf="product$ | async" [formData]="product$ | async"></app-product-form>
 </div>
