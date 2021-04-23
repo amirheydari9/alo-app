@@ -1,5 +1,5 @@
-import {Year} from '../../data/models/Year';
+import {IYear} from '../../data/models/IYear';
 
 export interface ProductState {
-  years: Year[];
+  years: IYear[];
 }

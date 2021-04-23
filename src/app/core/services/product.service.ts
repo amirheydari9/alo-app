@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {IProduct} from '../../data/models/IProduct';
 import {Observable} from 'rxjs';
-import {Year} from '../../data/models/Year';
 
 @Injectable({
   providedIn: 'root'
@@ -13,4 +13,7 @@ export class ProductService {
   ) {
   }
 
+  getProductByYearId(id: string): Observable<IProduct> {
+    return this.http.get<IProduct>('http://localhost:3000/products?year_id=' + id);
+  }
 }

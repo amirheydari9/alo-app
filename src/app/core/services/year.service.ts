@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Year} from '../../data/models/Year';
+import {IYear} from '../../data/models/IYear';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class YearService {
   ) {
   }
 
-  getYears(): Observable<Year[]> {
-    return this.http.get<Year[]>('http://localhost:3000/years');
+  getYears(): Observable<IYear[]> {
+    return this.http.get<IYear[]>('http://localhost:3000/years');
   }
 }

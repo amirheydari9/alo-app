@@ -1,5 +1,5 @@
 import {Action} from '@ngrx/store';
-import {Year} from '../../data/models/Year';
+import {IYear} from '../../data/models/IYear';
 
 export enum GetYearActionTypes {
   GET_YEAR = '[GET YEAR] Load',
@@ -13,7 +13,7 @@ export class GetYear implements Action {
 
 export class GetYearSuccess implements Action {
   readonly type = GetYearActionTypes.GET_YEAR_SUCCESS;
-  constructor(public payload: Year[]) {
+  constructor(public payload: IYear[]) {
   }
 }
 

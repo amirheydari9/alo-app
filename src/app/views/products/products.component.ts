@@ -3,7 +3,7 @@ import * as fromStore from '../../store';
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {ProductService} from '../../core/services/product.service';
-import {Year} from '../../data/models/Year';
+import {IYear} from '../../data/models/IYear';
 import {YearService} from '../../core/services/year.service';
 
 @Component({
@@ -12,7 +12,7 @@ import {YearService} from '../../core/services/year.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  years: Observable<Year[]>;
+  years: Observable<IYear[]>;
 
   constructor(
     private store: Store<fromStore.State>,
