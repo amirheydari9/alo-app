@@ -108,26 +108,26 @@
       "title": {
         "value": "book",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "fa_title": {
         "value": "کتاب",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "description": {
         "value": "desc2",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "count": {
         "value": 200,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "price": {
         "value": 2000,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "discount": {
@@ -156,7 +156,7 @@
       },
       "fa_title": {
         "value": "عینک",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "description": {
@@ -167,7 +167,7 @@
       "count": {
         "value": 300,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "price": {
         "value": 3000,
@@ -201,12 +201,12 @@
       "fa_title": {
         "value": "کیف",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "description": {
         "value": "desc4",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "count": {
         "value": 400,
@@ -215,7 +215,7 @@
       },
       "price": {
         "value": 4000,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "discount": {
@@ -239,13 +239,13 @@
       "year_id": 5,
       "title": {
         "value": "mobile",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "fa_title": {
         "value": "تلفن همراه",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "description": {
         "value": "desc5",
@@ -255,7 +255,7 @@
       "count": {
         "value": 500,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "price": {
         "value": 5000,
@@ -283,32 +283,32 @@
       "year_id": 6,
       "title": {
         "value": "laptop",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "fa_title": {
         "value": "لپ تاپ",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "description": {
         "value": "desc6",
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "count": {
         "value": 600,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "price": {
         "value": 6000,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "discount": {
         "value": 60,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "is_special": {
@@ -416,7 +416,7 @@
       "title": {
         "value": "paper",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "fa_title": {
         "value": "کاغذ",
@@ -440,8 +440,8 @@
       },
       "discount": {
         "value": 90,
-        "is_required": true,
-        "is_show": true
+        "is_required": false,
+        "is_show": false
       },
       "is_special": {
         "value": true,
@@ -470,32 +470,32 @@
       "description": {
         "value": "desc10",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "count": {
         "value": 1000,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "price": {
         "value": 10000,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "discount": {
         "value": 100,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       }
     },
     {
@@ -509,21 +509,21 @@
       "fa_title": {
         "value": "دوچرخه",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "description": {
         "value": "desc11",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "count": {
         "value": 1100,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "price": {
         "value": 11000,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "discount": {
@@ -548,7 +548,7 @@
       "title": {
         "value": "bike",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "fa_title": {
         "value": "موتور",
@@ -562,13 +562,13 @@
       },
       "count": {
         "value": 1200,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "price": {
         "value": 12000,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "discount": {
         "value": 120,
@@ -597,7 +597,7 @@
       "fa_title": {
         "value": "چتر",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "description": {
         "value": "desc13",
@@ -607,11 +607,11 @@
       "count": {
         "value": 1300,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "price": {
         "value": 13000,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "discount": {
@@ -646,11 +646,11 @@
       "description": {
         "value": "desc14",
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "count": {
         "value": 1400,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       },
       "price": {
@@ -666,11 +666,11 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
-        "is_required": true,
+        "is_required": false,
         "is_show": true
       }
     }
