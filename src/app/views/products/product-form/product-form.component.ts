@@ -51,7 +51,7 @@ export class ProductFormComponent implements OnInit {
     this.ngxUiLoaderService.start();
     const dialogRef = this.dialog.open(ProductModalComponent, {
       disableClose: false,
-      data: {name: 'amir'}
+      data: {form: this.form.value}
     });
     dialogRef.afterClosed().subscribe(res => {
 

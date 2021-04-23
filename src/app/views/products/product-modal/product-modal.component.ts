@@ -20,7 +20,7 @@ export class ProductModalComponent implements OnInit {
   ngOnInit(): void {
     this.ngxUiLoaderService.stop();
 
-    console.log(this.data);
+    console.log(this.data,'asasasaasww');
   }
 
 }
