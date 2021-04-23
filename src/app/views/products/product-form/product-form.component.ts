@@ -72,7 +72,6 @@ export class ProductFormComponent implements OnInit {
 
     this.isActiveControl.setValidators(this.formData.is_active.is_required ? [Validators.required] : null);
     this.isActiveControl.updateValueAndValidity();
-
   }
 
   get titleControl(): FormControl {
