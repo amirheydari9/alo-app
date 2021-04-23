@@ -13,6 +13,14 @@ export class ProductFormComponent implements OnInit {
 
   @Input() formData;
   form: FormGroup;
+  titleIsShow = true;
+  faTitleIsShow = true;
+  descriptionIsShow = true;
+  countIsShow = true;
+  priceIsShow = true;
+  discountIsShow = true;
+  isSpecialIsShow = true;
+  isActiveIsShow = true;
 
   constructor(
     public dialog: MatDialog,
@@ -46,6 +54,14 @@ export class ProductFormComponent implements OnInit {
       is_special: new FormControl(),
       is_active: new FormControl(),
     });
+    this.titleIsShow = this.formData.title.is_show;
+    this.faTitleIsShow = this.formData.fa_title.is_show;
+    this.descriptionIsShow = this.formData.description.is_show;
+    this.countIsShow = this.formData.count.is_show;
+    this.priceIsShow = this.formData.price.is_show;
+    this.discountIsShow = this.formData.discount.is_show;
+    this.isSpecialIsShow = this.formData.is_special.is_show;
+    this.isActiveIsShow = this.formData.is_active.is_show;
   }
 
   setValidators(): void {
