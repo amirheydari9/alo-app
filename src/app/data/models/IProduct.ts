@@ -9,4 +9,5 @@ export interface IProduct {
   count: SampleObject;
   cost: SampleObject;
   discount: SampleObject;
+  is_special: SampleObject;
 }

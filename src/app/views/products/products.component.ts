@@ -6,6 +6,7 @@ import {ProductService} from '../../core/services/product.service';
 import {IYear} from '../../data/models/IYear';
 import {YearService} from '../../core/services/year.service';
 import {IProduct} from '../../data/models/IProduct';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-products',
@@ -15,6 +16,7 @@ import {IProduct} from '../../data/models/IProduct';
 export class ProductsComponent implements OnInit {
   years: Observable<IYear[]>;
   product: Observable<IProduct>;
+  form: FormGroup;
 
   constructor(
     private store: Store<fromStore.State>,
@@ -27,6 +29,22 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(new fromStore.GetYear());
-    this.store.dispatch(new fromStore.GetProduct(2));
+    this.initForm();
+    this.form.controls.year.valueChanges.subscribe(data => {
+      this.store.dispatch(new fromStore.GetProduct(data));
+    });
+  }
+
+  initForm() {
+    this.form = new FormGroup({
+      year: new FormControl(),
+      title: new FormControl(),
+      fa_title: new FormControl(),
+      description: new FormControl(),
+      count: new FormControl(),
+      cost: new FormControl(),
+      discount: new FormControl(),
+      is_special: new FormControl(),
+    });
   }
 }

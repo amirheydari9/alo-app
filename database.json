@@ -90,6 +90,11 @@
         "value": 10,
         "is_required": true,
         "is_show": true
+      },
+      "is_special": {
+        "value": true,
+        "is_required": true,
+        "is_show": true
       }
     },
     {
@@ -122,6 +127,11 @@
       },
       "discount": {
         "value": 10,
+        "is_required": true,
+        "is_show": true
+      },
+      "is_special": {
+        "value": true,
         "is_required": true,
         "is_show": true
       }
