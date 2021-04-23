@@ -13,7 +13,7 @@ export class ProductService {
   ) {
   }
 
-  getProductByYearId(id: string): Observable<IProduct> {
+  getProductByYearId(id: number): Observable<IProduct> {
     return this.http.get<IProduct>('http://localhost:3000/products?year_id=' + id);
   }
 }

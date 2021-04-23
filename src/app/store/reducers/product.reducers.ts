@@ -1,8 +1,9 @@
-import {AllProductsAction, GetYearActionTypes} from '../actions';
+import {AllProductsAction, GetProductActionTypes, GetYearActionTypes} from '../actions';
 import {ProductState} from '../_model/ProductState';
 
 export const initProductsState: ProductState = {
-  years: []
+  years: [],
+  product: null
 };
 
 export function productsReducer(state = initProductsState, action: AllProductsAction): ProductState {
@@ -11,6 +12,12 @@ export function productsReducer(state = initProductsState, action: AllProductsAc
       return {
         ...state,
         years: action.payload
+      };
+    case GetProductActionTypes.GET_PRODUCT_SUCCESS:
+      console.log(action.payload[0]);
+      return {
+        ...state,
+        product: action.payload[0]
       };
     default:
       return state;

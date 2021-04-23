@@ -1,8 +1,8 @@
 import {SampleObject} from './sampleObject';
 
 export interface IProduct {
-  id: string;
-  year_id: string;
+  id: number;
+  year_id: number;
   title: SampleObject;
   fa_title: SampleObject;
   description: SampleObject;
