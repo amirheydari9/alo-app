@@ -1,60 +1,18 @@
 <div class="container">
-  <form [formGroup]="form" (ngSubmit)="submitForm()">
-    <div class="d-flex flex-row flex-wrap">
-      <div class="col-12 col-sm-4">
-        <mat-form-field appearance="outline" class="w-100">
-          <mat-label>سال تولید کالا</mat-label>
-          <mat-select formControlName="year">
-            <mat-option *ngFor="let year of years|async" value="{{year.id}}">{{year.title}}</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-12 col-sm-4">
+     <form [formGroup]="parentForm">
+       <mat-form-field appearance="outline" class="w-100">
+         <mat-label>سال تولید کالا</mat-label>
+         <mat-select formControlName="year">
+           <mat-option *ngFor="let year of years$|async" value="{{year.id}}">{{year.title}}</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </form>
     </div>
-    <hr/>
-    <div class="d-flex flex-row flex-wrap" *ngIf="product | async">
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>نام کالا</mat-label>
-          <input matInput type="text" formControlName="title">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>نام کالا فارسی</mat-label>
-          <input matInput type="text" formControlName="fa_title">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>توضیحات</mat-label>
-          <input matInput type="text" formControlName="description">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>تعداد</mat-label>
-          <input matInput type="text" formControlName="count">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>قیمت</mat-label>
-          <input matInput type="text" formControlName="price">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-form-field class="w-100" appearance="outline">
-          <mat-label>تخفیف</mat-label>
-          <input matInput type="text" formControlName="discount">
-        </mat-form-field>
-      </div>
-      <div class="col-12 col-sm-4">
-        <mat-label>در انتظار تایید</mat-label>
-        <mat-slide-toggle formControlName="is_special" class="w-100 mt-2"></mat-slide-toggle>
-      </div>
-      <div class="col-12 col-sm-4 mr-auto">
-        <button type="submit" class="btn btn-success btn-block mt-3">ارسال</button>
-      </div>
-    </div>
-  </form>
+  </div>
+  <hr/>
+  <div *ngIf="product$ | async">
+    <app-product-form [formData]="product$ | async"></app-product-form>
+  </div>
 </div>
