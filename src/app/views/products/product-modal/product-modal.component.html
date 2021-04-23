@@ -1,5 +1,7 @@
 <mat-dialog-content>
-
+    <p *ngFor="let item of data.form | keyvalue;">
+      Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+    </p>
 </mat-dialog-content>
 <mat-dialog-actions class="float-left">
   <button class="btn btn-danger" mat-raised-button mat-dialog-close (click)="this.dialogRef.close()">بستن</button>
