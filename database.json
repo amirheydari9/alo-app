@@ -95,6 +95,11 @@
         "value": true,
         "is_required": true,
         "is_show": true
+      },
+      "is_active": {
+        "value": true,
+        "is_required": true,
+        "is_show": true
       }
     },
     {
@@ -131,6 +136,11 @@
         "is_show": true
       },
       "is_special": {
+        "value": true,
+        "is_required": true,
+        "is_show": true
+      },
+      "is_active": {
         "value": true,
         "is_required": true,
         "is_show": true

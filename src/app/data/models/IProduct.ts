@@ -10,4 +10,5 @@ export interface IProduct {
   price: SampleObject;
   discount: SampleObject;
   is_special: SampleObject;
+  is_active: SampleObject;
 }

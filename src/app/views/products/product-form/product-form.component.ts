@@ -30,6 +30,7 @@ export class ProductFormComponent implements OnInit {
       price: this.formData.price.value,
       discount: this.formData.discount.value,
       is_special: this.formData.is_special.value,
+      is_active: this.formData.is_active.value,
     });
   }
 
@@ -42,6 +43,7 @@ export class ProductFormComponent implements OnInit {
       price: new FormControl(),
       discount: new FormControl(),
       is_special: new FormControl(),
+      is_active: new FormControl(),
     });
   }
 
