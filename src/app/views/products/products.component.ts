@@ -27,6 +27,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch(new fromStore.GetYear());
-    this.store.dispatch(new fromStore.GetProduct(1));
+    this.store.dispatch(new fromStore.GetProduct(2));
   }
 }
