@@ -4,36 +4,42 @@
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>نام کالا</mat-label>
         <input matInput type="text" formControlName="title">
+        <mat-error *ngIf="errorHandling('title', 'required')">نام اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>نام کالا فارسی</mat-label>
         <input matInput type="text" formControlName="fa_title">
+        <mat-error *ngIf="errorHandling('fa_title', 'required')">نام فارسی اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>توضیحات</mat-label>
         <input matInput type="text" formControlName="description">
+        <mat-error *ngIf="errorHandling('description', 'required')">توضیحات اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>تعداد</mat-label>
         <input matInput type="text" formControlName="count">
+        <mat-error *ngIf="errorHandling('count', 'required')">تعداد اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>قیمت</mat-label>
         <input matInput type="text" formControlName="price">
+        <mat-error *ngIf="errorHandling('price', 'required')">قیمت اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">
       <mat-form-field class="w-100" appearance="outline">
         <mat-label>تخفیف</mat-label>
         <input matInput type="text" formControlName="discount">
+        <mat-error *ngIf="errorHandling('discount', 'required')">تخفیف اجباری است</mat-error>
       </mat-form-field>
     </div>
     <div class="col-12 col-sm-4">

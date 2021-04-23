@@ -115,4 +115,8 @@ export class ProductFormComponent implements OnInit {
       });
     }
   }
+
+  errorHandling(control: string, error: string) {
+    return this.form.get(control).hasError(error);
+  }
 }
