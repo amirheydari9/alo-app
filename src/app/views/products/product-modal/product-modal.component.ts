@@ -13,14 +13,11 @@ export class ProductModalComponent implements OnInit {
     public dialogRef: MatDialogRef<ProductModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private ngxUiLoaderService: NgxUiLoaderService
-
   ) {
   }
 
   ngOnInit(): void {
     this.ngxUiLoaderService.stop();
-
-    console.log(this.data,'asasasaasww');
   }
 
 }

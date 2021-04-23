@@ -51,7 +51,7 @@
       <mat-slide-toggle formControlName="is_active"></mat-slide-toggle>
     </div>
     <div class="col-12 col-sm-4 mr-auto">
-      <button type="submit" class="btn btn-success btn-block mt-3">ارسال</button>
+      <button type="submit" class="btn btn-success btn-block mt-3" [disabled]="this.form.invalid">ارسال</button>
     </div>
   </div>
 </form>

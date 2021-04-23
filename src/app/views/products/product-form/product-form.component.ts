@@ -126,7 +126,7 @@ export class ProductFormComponent implements OnInit {
     if (this.form.valid) {
       this.ngxUiLoaderService.start();
       this.dialog.open(ProductModalComponent, {
-        disableClose: false,
+        disableClose: true,
         data: {form: this.form.value}
       });
     }
