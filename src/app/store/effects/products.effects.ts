@@ -32,7 +32,6 @@ export class ProductsEffects {
   LoadProduct$: Observable<Action> = this.action$.pipe(ofType(AllProductsAction.GetProductActionTypes.GET_PRODUCT))
     .pipe(
       switchMap((action) => {
-        console.log(action);
         return this.productService.getProductByYearId(action['payload']).pipe(
           map(product => new AllProductsAction.GetProductSuccess(product)),
           catchError(error => of(new AllProductsAction.GetProductFail(error)))
