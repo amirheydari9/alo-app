@@ -101,32 +101,32 @@
       "id": 2,
       "year_id": 2,
       "title": {
-        "value": "tv",
+        "value": "book",
         "is_required": true,
         "is_show": true
       },
       "fa_title": {
-        "value": "تلویزیون",
+        "value": "کتاب",
         "is_required": true,
         "is_show": true
       },
       "description": {
-        "value": "desc1",
+        "value": "desc2",
         "is_required": true,
         "is_show": true
       },
       "count": {
-        "value": 100,
+        "value": 200,
         "is_required": true,
         "is_show": true
       },
       "cost": {
-        "value": 1000,
+        "value": 2000,
         "is_required": true,
         "is_show": true
       },
       "discount": {
-        "value": 10,
+        "value": 20,
         "is_required": true,
         "is_show": true
       },
