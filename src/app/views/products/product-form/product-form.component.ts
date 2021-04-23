@@ -30,30 +30,6 @@ export class ProductFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
-    this.form.setValue({
-      title: this.formData.title.value,
-      fa_title: this.formData.fa_title.value,
-      description: this.formData.description.value,
-      count: this.formData.count.value,
-      price: this.formData.price.value,
-      discount: this.formData.discount.value,
-      is_special: this.formData.is_special.value,
-      is_active: this.formData.is_active.value,
-    });
-    this.setValidators();
-  }
-
-  initForm() {
-    this.form = new FormGroup({
-      title: new FormControl(),
-      fa_title: new FormControl(),
-      description: new FormControl(),
-      count: new FormControl(),
-      price: new FormControl(),
-      discount: new FormControl(),
-      is_special: new FormControl(),
-      is_active: new FormControl(),
-    });
     this.titleIsShow = this.formData.title.is_show;
     this.faTitleIsShow = this.formData.fa_title.is_show;
     this.descriptionIsShow = this.formData.description.is_show;
@@ -62,64 +38,54 @@ export class ProductFormComponent implements OnInit {
     this.discountIsShow = this.formData.discount.is_show;
     this.isSpecialIsShow = this.formData.is_special.is_show;
     this.isActiveIsShow = this.formData.is_active.is_show;
+    this.handleControls();
   }
 
-  setValidators(): void {
-    this.titleControl.setValidators(this.formData.title.is_required ? [Validators.required] : null);
-    this.titleControl.updateValueAndValidity();
-
-    this.faTitleControl.setValidators(this.formData.fa_title.is_required ? [Validators.required] : null);
-    this.faTitleControl.updateValueAndValidity();
-
-    this.descriptionControl.setValidators(this.formData.description.is_required ? [Validators.required] : null);
-    this.descriptionControl.updateValueAndValidity();
-
-    this.countControl.setValidators(this.formData.count.is_required ? [Validators.required] : null);
-    this.countControl.updateValueAndValidity();
-
-    this.priceControl.setValidators(this.formData.price.is_required ? [Validators.required] : null);
-    this.priceControl.updateValueAndValidity();
-
-    this.discountControl.setValidators(this.formData.discount.is_required ? [Validators.required] : null);
-    this.discountControl.updateValueAndValidity();
-
-    this.isSpecialControl.setValidators(this.formData.is_special.is_required ? [Validators.required] : null);
-    this.isSpecialControl.updateValueAndValidity();
-
-    this.isActiveControl.setValidators(this.formData.is_active.is_required ? [Validators.required] : null);
-    this.isActiveControl.updateValueAndValidity();
+  initForm() {
+    this.form = new FormGroup({});
   }
 
-  get titleControl(): FormControl {
-    return this.form.get('title') as FormControl;
-  }
-
-  get faTitleControl(): FormControl {
-    return this.form.get('fa_title') as FormControl;
-  }
-
-  get descriptionControl(): FormControl {
-    return this.form.get('description') as FormControl;
-  }
-
-  get countControl(): FormControl {
-    return this.form.get('count') as FormControl;
-  }
-
-  get priceControl(): FormControl {
-    return this.form.get('price') as FormControl;
-  }
-
-  get discountControl(): FormControl {
-    return this.form.get('discount') as FormControl;
-  }
-
-  get isSpecialControl(): FormControl {
-    return this.form.get('is_special') as FormControl;
-  }
-
-  get isActiveControl(): FormControl {
-    return this.form.get('is_active') as FormControl;
+  handleControls(): void {
+    if (this.titleIsShow) {
+      this.form.addControl('title', new FormControl());
+      this.form.controls.title.patchValue(this.formData.title.value);
+      this.handleValidity('title', this.formData.title.is_required);
+    }
+    if (this.faTitleIsShow) {
+      this.form.addControl('fa_title', new FormControl());
+      this.form.controls.fa_title.patchValue(this.formData.fa_title.value);
+      this.handleValidity('fa_title', this.formData.fa_title.is_required);
+    }
+    if (this.descriptionIsShow) {
+      this.form.addControl('description', new FormControl());
+      this.form.controls.description.patchValue(this.formData.description.value);
+      this.handleValidity('description', this.formData.description.is_required);
+    }
+    if (this.countIsShow) {
+      this.form.addControl('count', new FormControl());
+      this.form.controls.count.patchValue(this.formData.count.value);
+      this.handleValidity('count', this.formData.count.is_required);
+    }
+    if (this.priceIsShow) {
+      this.form.addControl('price', new FormControl());
+      this.form.controls.price.patchValue(this.formData.price.value);
+      this.handleValidity('price', this.formData.price.is_required);
+    }
+    if (this.discountIsShow) {
+      this.form.addControl('discount', new FormControl());
+      this.form.controls.discount.patchValue(this.formData.price.value);
+      this.handleValidity('discount', this.formData.discount.is_required);
+    }
+    if (this.isSpecialIsShow) {
+      this.form.addControl('is_special', new FormControl());
+      this.form.controls.is_special.patchValue(this.formData.is_special.value);
+      this.handleValidity('is_special', this.formData.is_special.is_required);
+    }
+    if (this.isActiveIsShow) {
+      this.form.addControl('is_active', new FormControl());
+      this.form.controls.is_active.patchValue(this.formData.is_active.value);
+      this.handleValidity('is_active', this.formData.is_active.is_required);
+    }
   }
 
   submitForm(): void {
@@ -132,7 +98,12 @@ export class ProductFormComponent implements OnInit {
     }
   }
 
-  errorHandling(control: string, error: string) {
+  handleValidity(control: string, condition: boolean): void {
+    this.form.get(control).setValidators(condition ? [Validators.required] : null);
+    this.form.get(control).updateValueAndValidity();
+  }
+
+  errorHandling(control: string, error: string): boolean {
     return this.form.get(control).hasError(error);
   }
 }

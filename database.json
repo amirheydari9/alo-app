@@ -226,12 +226,12 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       }
     },
     {
@@ -270,7 +270,7 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
@@ -314,7 +314,7 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
@@ -402,12 +402,12 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       }
     },
     {
@@ -495,7 +495,7 @@
       "is_active": {
         "value": true,
         "is_required": true,
-        "is_show": false
+        "is_show": true
       }
     },
     {
@@ -534,7 +534,7 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
@@ -578,12 +578,12 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       }
     },
     {
@@ -622,7 +622,7 @@
       "is_special": {
         "value": true,
         "is_required": true,
-        "is_show": true
+        "is_show": false
       },
       "is_active": {
         "value": true,
@@ -671,7 +671,7 @@
       "is_active": {
         "value": true,
         "is_required": false,
-        "is_show": true
+        "is_show": false
       }
     }
   ]
