@@ -42,13 +42,13 @@
         <mat-error *ngIf="errorHandling('discount', 'required')">تخفیف اجباری است</mat-error>
       </mat-form-field>
     </div>
-    <div class="col-12 col-sm-4" *ngIf="isSpecialIsShow">
+    <div class="col-12 col-sm-4 text-right d-flex justify-content-between align-items-center" *ngIf="isSpecialIsShow">
       <mat-label>پیشنهاد ویژه</mat-label>
-      <mat-slide-toggle formControlName="is_special" class="w-100 mt-2"></mat-slide-toggle>
+      <mat-slide-toggle formControlName="is_special"></mat-slide-toggle>
     </div>
-    <div class="col-12 col-sm-4" *ngIf="isActiveIsShow">
+    <div class="col-12 col-sm-4 text-right d-flex justify-content-between align-items-center" *ngIf="isActiveIsShow">
       <mat-label>فعال است</mat-label>
-      <mat-slide-toggle formControlName="is_active" class="w-100 mt-2"></mat-slide-toggle>
+      <mat-slide-toggle formControlName="is_active"></mat-slide-toggle>
     </div>
     <div class="col-12 col-sm-4 mr-auto">
       <button type="submit" class="btn btn-success btn-block mt-3">ارسال</button>
